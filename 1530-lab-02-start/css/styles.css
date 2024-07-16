@@ -16,16 +16,140 @@ font-family: 'Pacifico', cursive;
 
 /* UNIVERSAL STYLES */
 
+body {
+    background-image: url(../img/grapefruit-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #eeeaeb;
+    font-family: "Poppins", sans-serif;
+}
 
+img {
+    height: 1rem;
+    display: inline-block;
+}
+
+.link {
+    gap: 0.3rem;
+    display: flex;
+}
+
+.banner {
+    width: 100%;
+    background-color: #20abad;
+    display: flex;
+    flex-direction: column;
+}
+h2,
+h1 {
+    font-size: 4rem;
+    font-family: "Pacifico", cursive;
+}
+
+button {
+    background-color: #20abad;
+    color: #eeeaeb;
+    border-width: 0;
+    border-radius: 0.75rem;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    width: 30%;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
 /* MOBILE VIEW */
 
-
 /* DESKTOP VIEW */
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+    .submenu {
+        display: block;
+        position: relative;
+        top: 1.25rem;
+        right: 4rem;
+    }
+    .banner > h2 {
+        font-size: 3rem;
+        text-align: center;
+    }
+    .banner {
+        padding: 2rem;
+    }
 
+    .link > img {
+        visibility: collapse;
+    }
+
+    .link {
+        display: flex;
+        height: 10rem;
+    }
+
+    .info {
+        margin-top: 4rem;
+        position: relative;
+        left: 25%;
+        gap: 2rem;
+        width: 45%;
+        text-align: center;
+    }
+
+    .menu > li {
+        text-decoration: underline;
+        position: relative;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 /* LARGEST VIEW */
 @media screen and (min-width: 1024px) {
-    
+    .submenu {
+        display: none;
+    }
+
+    .link:hover > ul,
+    .link:focus-within > ul,
+    .link:hover {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .link {
+        display: flex;
+        align-items: center;
+    }
+
+    .banner {
+        height: 20rem;
+        font-size: 1.5rem;
+        gap: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.25rem;
+    }
+    nav {
+        width: 80%;
+    }
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+    }
+
+    .info {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+    }
 }
